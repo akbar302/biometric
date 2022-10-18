@@ -1,0 +1,89 @@
+<app-header></app-header>
+
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [(opened)]="opened">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+
+
+    <mat-drawer-content>
+        <mat-card>
+            <h1>
+                employee-list</h1>
+            <div class="double">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label for="district">Employee Code : <input class="halfwidthInput" type="text" name="text"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="district">Company : </label>
+                <label>
+                        <select name="district" tabindex="1" id="district" class="select">
+                            <option selected="selected">---Select one--</option>
+                            <option>All</option>
+                            <option>DefaultCompany</option>
+                        </select>
+                    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="district">Category : </label>
+                <label>
+                        <select name="district" tabindex="1" id="district" class="select">
+                            <option selected="selected">---Select one--</option>
+                            <option>All</option>
+                            <option>DefaultCategory</option>
+                        </select>
+                    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <label for="district">Department :  </label>
+                <label>
+                        <select name="district" tabindex="1" id="district" class="select">
+                            <option selected="selected">---Select one--</option>
+                            <option>All</option>
+                            <option>DefaultDepartment</option>
+                        </select>
+                    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                <label for="district">Employee Name : <input class="halfwidthInput" type="text" name="text"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="district">Desigination : </label>
+                <label>
+                        <select name="district" tabindex="1" id="district" class="select">
+                            <option selected="selected">---Select one--</option>
+                            <option>All</option>
+                            <option>None</option>
+                        </select>
+                    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <label for="district">EmpType : </label>
+                <label>
+                        <select name="district" tabindex="1" id="district" class="select">
+                            <option selected="selected">---Select one--</option>
+                            <option>All</option>
+                            <option>None</option>
+                        </select>
+                    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <label for="district">Status : </label>
+                <label>
+                            <select name="district" tabindex="1" id="district" class="select">
+                                <option selected="selected">---Select one--</option>
+                                <option>All</option>
+                                <option>Working</option>
+                                <option>Resigned</option>
+                            </select>
+                        </label>&nbsp;&nbsp;&nbsp;
+            </div>
+            <br>
+            <table>
+                <tr>
+                    <td> Name</td>
+                    <td>Emp Code</td>
+                    <td>Company</td>
+                    <td>Department</td>
+                    <td>Category</td>
+                    <td>Location</td>
+                    <td>Status</td>
+                </tr>
+
+            </table>
+        </mat-card>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+
+
+<app-footer></app-footer>

@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [(opened)]="opened">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+
+
+    <mat-drawer-content>
+
+        <h1>&nbsp;&nbsp;Export Employee Leave Balance</h1>
+
+
+
+
+        <div class="border">
+            <br><label for="district">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year : <input type="date" type="date"  ></label>
+
+            <br><label for="district">&nbsp;&nbsp;&nbsp;Path : <input type="file" type="text" name="fileupload" size="55" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label><input type="file"></label>
+            <p align="right"> <button type="import" value="Submit">Export </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="cancle" value="Reset">cancle</button></p>
+        </div>
+
+
+
+
+
+
+
+
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>
+
+
+
+<router-outlet></router-outlet>

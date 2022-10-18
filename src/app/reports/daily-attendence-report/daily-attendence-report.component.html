@@ -1,0 +1,423 @@
+<app-header></app-header>
+
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [(opened)]="opened">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+
+
+    <mat-drawer-content>
+        <mat-card>
+            <h1>Daily Attendance Report</h1>
+            <button mat-button color="primary" (click)="openDialogWithTemplateRef(myDialog)">
+            Daily Attendance Report
+          </button>
+            <button mat-button color="primary" (click)="openDialogWithoutRef()">Basic Report</button>
+            <button mat-button color="primary" (click)="openDialogWithRef()">Team</button>
+            <button mat-button color="primary" (click)="openDialogRef()">Designation</button>
+
+
+
+            <!-- Dialog template -->
+
+            <ng-template #myDialog>
+                <div class=head>
+                    <strong><br> Daily Attendance Report</strong>
+                    <label for="district">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Group By :  </label>
+                    <label>
+                <select name="district" tabindex="1" id="district" class="select">
+                    <option selected="selected">---Select one--</option>
+                    <option>Department Wise</option>
+                    <option>Category Wise</option>
+                    <option>Designation Wise</option>
+                    <option>EmploymentType Wise</option>
+                    <option>Grade Wise</option>
+                    <option>Team Wise</option>
+                </select>
+                    </label>
+
+                    <label for="district">&nbsp;&nbsp;&nbsp;&nbsp;Group 2 :  </label>
+                    <label>
+                <select name="district" tabindex="1" id="district" class="select">
+                    <option selected="selected">---Select one--</option>
+                    <option>Date Wise</option>
+                    <option>Employee Wise</option>
+                </select>
+            </label>
+
+                    <label for="district">&nbsp;&nbsp;&nbsp;&nbsp;Sort By :  </label>
+                    <label>
+        <select name="district" tabindex="1" id="district" class="select">
+            <option selected="selected">---Select one--</option>
+            <option>Employee Code</option>
+            <option>Employee Name</option>
+        </select>
+    </label>
+                </div><br>
+                <div class="border">
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp; <label for="date">From Date : </label>
+                    <input type="date" id="birthday" name="birthday">&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <label for="date">To Date : </label>
+                    <input type="date" id="date" name="date">
+
+                    <label for="district">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Report Type :  </label>
+                    <label>
+        <select name="district" tabindex="1" id="district" class="select">
+            <option selected="selected">---Select one--</option>
+            <option>Basic Report</option>
+            <option>Detailed Report</option>
+            <option>Summary Report</option>
+            <option>In OutReport</option>
+            <option>In Out Duration Report</option>
+            <option>CSV Export</option>
+        </select>
+    </label>
+
+                </div>
+
+                <div class="wrap">
+
+                    <div class="fright">
+
+                        <br>&nbsp;&nbsp;&nbsp; <input type="checkbox" id="World" name="World" value="World">
+                        <label for="World">&nbsp;&nbsp;&nbsp;Select Shift</label><br> &nbsp;&nbsp;&nbsp;
+                        <input type="text" style="font-size: 18pt; height: 200px; width:280px; ">
+
+                    </div>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            <h3 class="text-on-pannel text-primary"><strong class="text-uppercase"> <input type="checkbox" id="World" name="World" value="World">
+                            <label for="World">&nbsp;&nbsp;&nbsp;Filter Employee:</label><br></strong></h3>
+
+
+
+                            <div class="fleft">
+                                <label for="district">Employee Code : <input class="halfwidthInput" type="text" name="text" size="12"></label>&nbsp;
+                                <input type="checkbox" id="World" name="World" value="World">
+                                <label for="World">&nbsp;Exact</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label for="district">Company : </label>
+                                <label>
+                                        <select name="district" tabindex="1" id="district" class="select">
+                                            <option selected="selected">---Select one--</option>
+                                            <option>All</option>
+                                            <option>DefaultCompany</option>
+                                        </select>
+                                    </label>
+
+                                <label for="district">Employee Name : <input class="halfwidthInput" type="text" name="text" size="15"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label for="district">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department :  </label>
+                                <label>
+                                        <select name="district" tabindex="1" id="district" class="select">
+                                            <option selected="selected">---Select one--</option>
+                                            <option>All</option>
+                                            <option>DefaultDepartment</option>
+                                        </select>
+                                    </label>
+
+                                <label for="district">Employee Category : </label>
+                                <label>
+                                                <select name="district" tabindex="1" id="district" class="select">
+                                                    <option selected="selected">---Select one--</option>
+                                                    <option>All</option>
+                                                    <option>DefaultDepartment</option>
+                                                    
+                                                </select>
+                                            </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label for="district">Status : </label>
+                                <label>
+                                                        <select name="district" tabindex="1" id="district" class="select">
+                                                            <option selected="selected">---Select one--</option>
+                                                            <option>All</option>
+                                                            <option>Present</option>
+                                                            <option>Absent</option>
+                                                            <option>Early Going</option>
+                                                            <option>Late Comming</option>
+                                                            <option>On Leave</option>
+                                                            <option>On Comp Off</option>
+                                                            <option>On Weekly Off</option>
+                                                            <option>On Restricted Holiday</option>
+                                                            <option>On Out Door Duty</option>
+                                                            <option>Short Worked</option>
+                                                            <option>Missed OutPunch</option>
+                                                        </select>
+                                                    </label>&nbsp;&nbsp;&nbsp;
+
+                                <label for="district">Employee Designation : </label>
+                                <label>
+                                                                    <select name="district" tabindex="1" id="district" class="select">
+                                                                        <option selected="selected">---Select one--</option>
+                                                                        <option>All</option>
+                                                                        <option>None</option>
+                                                                        
+                                                                    </select>
+                                                                </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label for="district">Employee Type : </label>
+                                <label>
+                                                                                <select name="district" tabindex="1" id="district" class="select">
+                                                                                    <option selected="selected">---Select one--</option>
+                                                                                    <option>All</option>
+                                                                                    <option>None</option>
+                                                                                    
+                                                                                </select>
+                                                                            </label>
+
+                                <label for="district">Employee Location : </label>
+                                <label>
+                                                                                <select name="district" tabindex="1" id="district" class="select">
+                                                                                    <option selected="selected">---Select one--</option>
+                                                                                    <option>All</option>
+                                                                                    <option>None</option>
+                                                                                    <option>Default</option>
+                                                                                </select>
+                                                                            </label>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <footer>
+                        <input type="checkbox" id="World" name="World" value="World">
+                        <label for="World">&nbsp;&nbsp;&nbsp;Recalculate Attendance</label> &nbsp;&nbsp;&nbsp;
+
+                        <label for="district">Select Multiple Employee </label> &nbsp;&nbsp;&nbsp;
+
+
+                        <input type="checkbox" id="World" name="World" value="World">
+                        <label for="World">&nbsp;&nbsp;&nbsp;Show Header</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <button type="button" onclick=>Generate</button>&nbsp;&nbsp;&nbsp;
+
+                        <button mat-button matDialogClose color="primary">Close </button>
+
+
+
+                    </footer>
+                </div>
+            </ng-template>
+
+            <ng-template #secondDialog>
+
+                <div class=head>
+                    <strong><br> Daily Attendance Report</strong>
+                    <label for="district">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Group By :  </label>
+                    <label>
+                <select name="district" tabindex="1" id="district" class="select">
+                    <option selected="selected">---Select one--</option>
+                    <option>Department Wise</option>
+                    <option>Category Wise</option>
+                    <option>Designation Wise</option>
+                    <option>EmploymentType Wise</option>
+                    <option>Grade Wise</option>
+                    <option>Team Wise</option>
+                </select>
+                    </label>
+
+                    <label for="district">&nbsp;&nbsp;&nbsp;&nbsp;Group 2 :  </label>
+                    <label>
+                <select name="district" tabindex="1" id="district" class="select">
+                    <option selected="selected">---Select one--</option>
+                    <option>Date Wise</option>
+                    <option>Employee Wise</option>
+                </select>
+            </label>
+
+                    <label for="district">&nbsp;&nbsp;&nbsp;&nbsp;Sort By :  </label>
+                    <label>
+        <select name="district" tabindex="1" id="district" class="select">
+            <option selected="selected">---Select one--</option>
+            <option>Employee Code</option>
+            <option>Employee Name</option>
+        </select>
+    </label>
+                </div><br>
+                <div class="border">
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp; <label for="date">From Date : </label>
+                    <input type="date" id="birthday" name="birthday">&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <label for="date">To Date : </label>
+                    <input type="date" id="date" name="date">
+
+                    <label for="district">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Report Type :  </label>
+                    <label>
+        <select name="district" tabindex="1" id="district" class="select">
+            <option selected="selected">---Select one--</option>
+            <option>Basic Report</option>
+            <option>Detailed Report</option>
+            <option>Summary Report</option>
+            <option>In OutReport</option>
+            <option>In Out Duration Report</option>
+            <option>CSV Export</option>
+        </select>
+    </label>
+
+                </div>
+
+                <div class="wrap">
+
+                    <div class="fright">
+
+                        <br>&nbsp;&nbsp;&nbsp; <input type="checkbox" id="World" name="World" value="World">
+                        <label for="World">&nbsp;&nbsp;&nbsp;Select Shift</label><br> &nbsp;&nbsp;&nbsp;
+                        <input type="text" style="font-size: 18pt; height: 200px; width:280px; ">
+
+                    </div>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            <h3 class="text-on-pannel text-primary"><strong class="text-uppercase"> <input type="checkbox" id="World" name="World" value="World">
+                            <label for="World">&nbsp;&nbsp;&nbsp;Filter Employee:</label><br></strong></h3>
+
+
+
+                            <div class="fleft">
+                                <label for="district">Employee Code : <input class="halfwidthInput" type="text" name="text" size="12"></label>&nbsp;
+                                <input type="checkbox" id="World" name="World" value="World">
+                                <label for="World">&nbsp;Exact</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label for="district">Company : </label>
+                                <label>
+                                        <select name="district" tabindex="1" id="district" class="select">
+                                            <option selected="selected">---Select one--</option>
+                                            <option>All</option>
+                                            <option>DefaultCompany</option>
+                                        </select>
+                                    </label>
+
+                                <label for="district">Employee Name : <input class="halfwidthInput" type="text" name="text" size="15"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label for="district">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department :  </label>
+                                <label>
+                                        <select name="district" tabindex="1" id="district" class="select">
+                                            <option selected="selected">---Select one--</option>
+                                            <option>All</option>
+                                            <option>DefaultDepartment</option>
+                                        </select>
+                                    </label>
+
+                                <label for="district">Employee Category : </label>
+                                <label>
+                                                <select name="district" tabindex="1" id="district" class="select">
+                                                    <option selected="selected">---Select one--</option>
+                                                    <option>All</option>
+                                                    <option>DefaultDepartment</option>
+                                                    
+                                                </select>
+                                            </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label for="district">Status : </label>
+                                <label>
+                                                        <select name="district" tabindex="1" id="district" class="select">
+                                                            <option selected="selected">---Select one--</option>
+                                                            <option>All</option>
+                                                            <option>Present</option>
+                                                            <option>Absent</option>
+                                                            <option>Early Going</option>
+                                                            <option>Late Comming</option>
+                                                            <option>On Leave</option>
+                                                            <option>On Comp Off</option>
+                                                            <option>On Weekly Off</option>
+                                                            <option>On Restricted Holiday</option>
+                                                            <option>On Out Door Duty</option>
+                                                            <option>Short Worked</option>
+                                                            <option>Missed OutPunch</option>
+                                                        </select>
+                                                    </label>&nbsp;&nbsp;&nbsp;
+
+                                <label for="district">Employee Designation : </label>
+                                <label>
+                                                                    <select name="district" tabindex="1" id="district" class="select">
+                                                                        <option selected="selected">---Select one--</option>
+                                                                        <option>All</option>
+                                                                        <option>None</option>
+                                                                        
+                                                                    </select>
+                                                                </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <label for="district">Employee Type : </label>
+                                <label>
+                                                                                <select name="district" tabindex="1" id="district" class="select">
+                                                                                    <option selected="selected">---Select one--</option>
+                                                                                    <option>All</option>
+                                                                                    <option>None</option>
+                                                                                    
+                                                                                </select>
+                                                                            </label>
+
+                                <label for="district">Employee Location : </label>
+                                <label>
+                                                                                <select name="district" tabindex="1" id="district" class="select">
+                                                                                    <option selected="selected">---Select one--</option>
+                                                                                    <option>All</option>
+                                                                                    <option>None</option>
+                                                                                    <option>Default</option>
+                                                                                </select>
+                                                                            </label>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <footer>
+                        <input type="checkbox" id="World" name="World" value="World">
+                        <label for="World">&nbsp;&nbsp;&nbsp;Recalculate Attendance</label> &nbsp;&nbsp;&nbsp;
+
+                        <label for="district">Select Multiple Employee </label> &nbsp;&nbsp;&nbsp;
+
+
+                        <input type="checkbox" id="World" name="World" value="World">
+                        <label for="World">&nbsp;&nbsp;&nbsp;Show Header</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <button type="button" onclick=>Generate</button>&nbsp;&nbsp;&nbsp;
+
+                        <button mat-button matDialogClose color="primary">Close </button>
+
+
+
+                    </footer>
+                </div>
+            </ng-template>
+
+            <ng-template #thirdDialog>
+                <h1>Team</h1>
+                <table>
+                    <tr>
+                        <td>Team Code</td>
+                        <td>Team Name</td>
+                    </tr>
+                </table>
+
+                <mat-dialog-actions align="end">
+                    <button mat-button matDialogClose color="primary">Close </button>
+                </mat-dialog-actions>
+            </ng-template>
+
+            <ng-template #fourthDialog>
+                <h1>Designation</h1>
+                <table>
+                    <tr>
+                        <td>Designation Code</td>
+                        <td>Designation Name</td>
+                    </tr>
+                </table>
+
+                <mat-dialog-actions align="end">
+                    <button mat-button matDialogClose color="primary">Close </button>
+                </mat-dialog-actions>
+            </ng-template>
+
+
+
+        </mat-card>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

@@ -1,0 +1,121 @@
+<app-header></app-header>
+
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [(opened)]="opened">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+
+
+    <mat-drawer-content>
+        <mat-card>
+            <h1>Pagination</h1>
+            <div class="date">
+                &nbsp;&nbsp;&nbsp;&nbsp; <label for="date">From Date : </label>
+                <input type="date" id="birthday" name="birthday">&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <label for="date">To Date : </label>
+                <input type="date" id="date" name="date">
+            </div>
+
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <h3 class="text-on-pannel text-primary"><strong class="text-uppercase"> Filter Emp:</strong></h3>
+
+                    <div class="double"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="district">Employee Code : <input class="halfwidthInput" type="text" name="text" (input)="handleInput($event)" />
+
+                            {{value}}
+                </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <label for="district">Employee Name : <input class="halfwidthInput" type="text" name="text"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="district">Company : </label>
+
+                        <label>
+                        <select name="district" tabindex="1" id="district" class="select">
+                       <option selected="selected">---Select one--</option>
+                       <option>All</option>
+                       <option>DefaultCompany</option>
+                     </select>
+                        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <br> <label for="district">Category : </label>
+                        <label>
+            <select name="district" tabindex="1" id="district" class="select">
+                <option selected="selected">---Select one--</option>
+                <option>All</option>
+                <option>DefaultCategory</option>
+            </select>
+        </label>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <label for="district">Department : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+                        <label>
+            <select name="district" tabindex="1" id="district" class="select">
+                <option selected="selected">---Select one--</option>
+                <option>All</option>
+                <option>DefaultDepartment</option>
+            </select>
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <label for="district">Status  :  &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <label>
+            <select name="district" tabindex="1" id="district" class="select">
+                <option selected="selected">---Select one--</option>
+                <option>All</option>
+                <option>Working</option>
+                <option>Resigned</option>
+            </select>
+        </label> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" id="World" name="World" value="World">
+                        <label for="World">&nbsp;&nbsp;&nbsp; Match Whole World</label><br>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="position">
+                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="weight">
+                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="symbol">
+                        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+                </mat-paginator>
+            </div>
+
+
+        </mat-card>
+
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>
+
+
+
+<router-outlet></router-outlet>

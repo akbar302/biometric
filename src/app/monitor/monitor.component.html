@@ -1,0 +1,74 @@
+<app-header></app-header>
+
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [(opened)]="opened">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+
+
+    <mat-drawer-content>
+
+
+        <div class="date"><br>
+            <h1>&nbsp;&nbsp;Punch Monitor</h1>
+            <label for="date"> Date : </label>
+            <input type="date" id="birthday" name="birthday">&nbsp;
+
+            <label for="district">Company : </label>
+
+            <label>
+                        <select name="district" tabindex="1" id="district" class="select">
+                       <option selected="selected">---Select one--</option>
+                       <option>All</option>
+                       <option>DefaultCompany</option>
+                     </select>
+                        </label>&nbsp;
+
+            <label for="district">Department :  </label>
+            <label>
+            <select name="district" tabindex="1" id="district" class="select">
+                <option selected="selected">---Select one--</option>
+                <option>All</option>
+                <option>DefaultDepartment</option>
+            </select>
+        </label> &nbsp;
+            <label for="district">Employee Code : <input class="halfwidthInput" type="text" name="text" size="15"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button">Show Records</button>
+
+        </div>
+
+
+        <div class="wrap">
+            <div class="fright"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bar Chart</div>
+
+
+            <div class="fleft">
+                <table>
+                    <tr>
+                        <td>Employee Code</td>
+                        <td>Employee Name</td>
+                        <td>Company</td>
+                        <td>Department</td>
+                        <td>LastPunch</td>
+                        <td>Direction</td>
+                        <td>Punch Records</td>
+                        <td>Status</td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+        </div>
+
+
+
+
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>
+
+
+
+<router-outlet></router-outlet>

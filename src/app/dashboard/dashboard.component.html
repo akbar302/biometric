@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [(opened)]="opened">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+
+
+    <mat-drawer-content>
+        <mat-grid-list cols="4">
+            <mat-grid-tile class="activeuser">Active Users</mat-grid-tile>
+            <mat-grid-tile class="presentemployee">Title 2</mat-grid-tile>
+            <mat-grid-tile class="advance">Title 3</mat-grid-tile>
+            <mat-grid-tile class="leaverequest">Title 4</mat-grid-tile>
+        </mat-grid-list>
+    </mat-drawer-content>
+    <mat-drawer-content>
+        <mat-grid-list cols="4">
+            <mat-grid-tile class="activeuser">Title 4</mat-grid-tile>
+            <mat-grid-tile class="presentemployee">Title 2</mat-grid-tile>
+            <mat-grid-tile class="advance">Title 3</mat-grid-tile>
+            <mat-grid-tile class="advance">Title 3</mat-grid-tile>
+        </mat-grid-list>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+
+
+<app-footer></app-footer>

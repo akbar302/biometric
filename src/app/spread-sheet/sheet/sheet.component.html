@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [(opened)]="opened">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+
+
+    <mat-drawer-content>
+        <mat-card>
+            <h1>Location List</h1>
+
+            <Button (click)="changeCellData()">Change Cell Data</Button>
+            <!-- <button (click)="checkFilters()" >Check</button> -->
+            <ejs-spreadsheet #spreadSheetInstance (dataSourceChanged)="dataSourceChanged($event)" (cellEdit)="cellEdit($event)" (cellSave)="cellSave($event)" (actionComplete)="actionComplete($event)" (actionBegin)="actionBegin($event)" (dataBound)="dataBound()">
+
+            </ejs-spreadsheet>
+        </mat-card>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

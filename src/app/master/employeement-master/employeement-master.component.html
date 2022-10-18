@@ -1,0 +1,87 @@
+<app-header></app-header>
+
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [(opened)]="opened">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+
+
+    <mat-drawer-content>
+        <mat-card>
+            <h1>Employeement Master</h1>
+            <button mat-button color="primary" (click)="openDialogWithTemplateRef(myDialog)">
+            Employeement Type
+          </button>
+            <button mat-button color="primary" (click)="openDialogWithoutRef()">Grade</button>
+            <button mat-button color="primary" (click)="openDialogWithRef()">Team</button>
+            <button mat-button color="primary" (click)="openDialogRef()">Designation</button>
+
+
+
+            <!-- Dialog template -->
+
+            <ng-template #myDialog>
+                <h1>Employeement Type</h1>
+
+                <table>
+                    <tr>
+                        <td>Employeement Type Code</td>
+                        <td>Employeement Type Name</td>
+                    </tr>
+                </table>
+
+                <mat-dialog-actions align="end">
+                    <button mat-button matDialogClose color="primary">Close</button>
+                </mat-dialog-actions>
+            </ng-template>
+
+            <ng-template #secondDialog>
+                <h1>Grade</h1>
+                <table>
+                    <tr>
+                        <td>Grade Code</td>
+                        <td>Grade Name</td>
+                    </tr>
+                </table>
+
+                <mat-dialog-actions align="end">
+                    <button mat-button matDialogClose color="primary">Close </button>
+                </mat-dialog-actions>
+            </ng-template>
+
+            <ng-template #thirdDialog>
+                <h1>Team</h1>
+                <table>
+                    <tr>
+                        <td>Team Code</td>
+                        <td>Team Name</td>
+                    </tr>
+                </table>
+
+                <mat-dialog-actions align="end">
+                    <button mat-button matDialogClose color="primary">Close </button>
+                </mat-dialog-actions>
+            </ng-template>
+
+            <ng-template #fourthDialog>
+                <h1>Designation</h1>
+                <table>
+                    <tr>
+                        <td>Designation Code</td>
+                        <td>Designation Name</td>
+                    </tr>
+                </table>
+
+                <mat-dialog-actions align="end">
+                    <button mat-button matDialogClose color="primary">Close </button>
+                </mat-dialog-actions>
+            </ng-template>
+
+
+
+        </mat-card>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

@@ -1,0 +1,99 @@
+<app-header></app-header>
+
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [(opened)]="opened">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+
+
+    <mat-drawer-content>
+        <mat-card>
+            <h1>Employee-Shift</h1>
+            <div class="date">
+                &nbsp;&nbsp;&nbsp;&nbsp; <label for="date">From Date : </label>
+                <input type="date" id="birthday" name="birthday">&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <label for="date">To Date : </label>
+                <input type="date" id="date" name="date">
+            </div>
+
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <h3 class="text-on-pannel text-primary"><strong class="text-uppercase"> Filter Emp:</strong></h3>
+
+                    <div class="double"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="district">Employee Code : <input class="halfwidthInput" type="text" name="text"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="district">Employee Name : <input class="halfwidthInput" type="text" name="text"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="district">Company : </label>
+
+                        <label>
+                        <select name="district" tabindex="1" id="district" class="select">
+                       <option selected="selected">---Select one--</option>
+                       <option>All</option>
+                       <option>DefaultCompany</option>
+                     </select>
+                        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="district">Category : </label>
+                        <label>
+            <select name="district" tabindex="1" id="district" class="select">
+                <option selected="selected">---Select one--</option>
+                <option>All</option>
+                <option>DefaultCategory</option>
+            </select>
+        </label>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <label for="district">Department : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+                        <label>
+            <select name="district" tabindex="1" id="district" class="select">
+                <option selected="selected">---Select one--</option>
+                <option>All</option>
+                <option>DefaultDepartment</option>
+            </select>
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <label for="district">Status  :  &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <label>
+            <select name="district" tabindex="1" id="district" class="select">
+                <option selected="selected">---Select one--</option>
+                <option>All</option>
+                <option>Working</option>
+                <option>Resigned</option>
+            </select>
+        </label> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" id="World" name="World" value="World">
+                        <label for="World">&nbsp;&nbsp;&nbsp; Match Whole World</label><br>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <table>
+                <tr>
+                    <td>From Date</td>
+                    <td>To Date</td>
+                    <td>Shift Code</td>
+                    <td>Emp Code</td>
+                    <td>Emp Name</td>
+                    <td>Company</td>
+                    <td>Department</td>
+                    <td>Category</td>
+                    <td>Location</td>
+                    <td>Status</td>
+                </tr>
+
+            </table>
+
+
+        </mat-card>
+
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>
+
+
+
+<router-outlet></router-outlet>

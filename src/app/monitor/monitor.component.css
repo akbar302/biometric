@@ -1,0 +1,117 @@
+.nav-bar {
+    justify-content: space-between;
+}
+
+mat-drawer,
+mat-drawer-content {
+    padding: 10px;
+}
+
+.mat-toolbar.mat-warn {
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+mat-drawer-content {
+    height: 600px;
+}
+
+mat-grid-tile {
+    background: lightblue;
+}
+
+mat-drawer {
+    background-color: #eff1f9;
+    width: 200px;
+}
+
+.mat-form-field+.mat-form-field {
+    margin-left: 8px;
+}
+
+.nav-bar {
+    background-color: #dedede;
+}
+
+.adminimage img {
+    width: 40px;
+    border-radius: 6px;
+    box-shadow: 4px 3px 6px 0 rgb(0 0 0 / 20%);
+}
+
+mat-grid-tile-content.activeuser {
+    background: linear-gradient(to right, #493240, #f09) !important;
+    color: #fff;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+h1 {
+    background-color: #007bff;
+    height: 50px;
+    ;
+}
+
+td,
+th {
+    border: 1px solid #0c0808;
+    text-align: left;
+    padding: 10px;
+}
+
+td:hover {
+    background-color: #80a3e9;
+}
+
+.text-on-pannel {
+    background: #fff none repeat scroll 0 0;
+    height: auto;
+    margin-left: 20px;
+    padding: 3px 5px;
+    position: absolute;
+    margin-top: -47px;
+    border: 1px solid #050505;
+    border-radius: 8px;
+    color: black;
+}
+
+.panel {
+    /* for text on pannel */
+    margin-top: 27px !important;
+    color: #000;
+}
+
+.panel-body {
+    padding-top: 30px !important;
+    border: 1px groove rgb(12, 12, 12) !important;
+}
+
+.wrap {
+    width: 100%;
+    overflow: auo;
+}
+
+.fleft {
+    float: left;
+    width: 80%;
+    height: 400px;
+}
+
+.fright {
+    float: right;
+    background: #007bff;
+    height: 500px;
+    width: 20%;
+}
+
+.date {
+    background-color: #007bff;
+    padding: 5px;
+    margin-top: 0px;
+}

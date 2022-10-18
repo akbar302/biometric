@@ -1,0 +1,67 @@
+.nav-bar {
+    justify-content: space-between;
+}
+
+mat-drawer,
+mat-drawer-content {
+    padding: 10px;
+}
+
+.mat-toolbar.mat-warn {
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+mat-drawer-content {
+    height: 500px;
+}
+
+mat-grid-tile {
+    background: lightblue;
+}
+
+mat-drawer {
+    background-color: #eff1f9;
+    width: 200px;
+}
+
+.mat-form-field+.mat-form-field {
+    margin-left: 8px;
+}
+
+.nav-bar {
+    background-color: #dedede;
+}
+
+.adminimage img {
+    width: 40px;
+    border-radius: 6px;
+    box-shadow: 4px 3px 6px 0 rgb(0 0 0 / 20%);
+}
+
+mat-grid-tile-content.activeuser {
+    background: linear-gradient(to right, #493240, #f09) !important;
+    color: #fff;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+h1 {
+    background-color: #007bff;
+}
+
+td:hover {
+    background-color: #80a3e9;
+}

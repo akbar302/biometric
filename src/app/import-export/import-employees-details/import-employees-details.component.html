@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [(opened)]="opened">
+        <app-sidenav></app-sidenav>
+    </mat-drawer>
+
+
+    <mat-drawer-content>
+
+        <h1>&nbsp;&nbsp;Import Employees Details</h1>
+
+        <div class="wrap">
+            <div class="fright">
+                <h2><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Error/Success Message While Importing</strong></h2>
+                <textarea id="Message" name="Message" rows="10" cols="80"></textarea>
+
+            </div>
+
+            <div class="fleft">
+                <h2><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Import Employees Details</strong></h2>
+                <div class="border">
+                    <br> <label for="district">&nbsp;&nbsp;&nbsp;File Path : <input type="file" type="text" name="fileupload" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <label><input type="file"></label>
+                    <p><strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;download sample file</strong></p><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="import" value="Submit">Import from Excel</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="cancle" value="Reset">cancle</button><br>
+                </div>
+                <br>
+                <p><strong>Note- Comma should not be used in any of the cell</strong></p>
+
+            </div>
+
+        </div>
+
+
+
+
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>
+
+
+
+<router-outlet></router-outlet>

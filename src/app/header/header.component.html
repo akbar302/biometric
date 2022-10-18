@@ -1,0 +1,16 @@
+<mat-toolbar color="warn" class="nav-bar">
+    <img src="../assets/image-path/client-logo/logo.png" alt="" style="width:88px;">
+    <!-- <button (click)="opened=!opened"><mat-icon>menu</mat-icon></button> -->
+    <div>Attendence Software</div>
+    <div class="adminimage">
+        <img src="https://aspironkhuze.com/JC-Diwakar-Reddy-College-Softawre/assets/img/user.png" [matMenuTriggerFor]="adminservice">
+    </div>
+
+</mat-toolbar>
+
+<mat-menu #adminservice="matMenu">
+    <p>HELLO CHARAN</p>
+    <span mat-menu-item>Profile</span>
+    <span mat-menu-item>Change Password</span>
+    <span mat-menu-item>Log Out</span>
+</mat-menu>
